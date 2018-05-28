@@ -15,7 +15,7 @@ namespace EduDataAPI.Models
 
         [JsonProperty("UpdatedIdentifiers", ObjectCreationHandling = ObjectCreationHandling.Replace)]
         [System.ComponentModel.DataAnnotations.Schema.NotMapped]
-        public List<DataElement> UpdatedElement {get; set;}
+        public DataElement UpdatedElement {get; set;}
         
     }
 }

@@ -50,6 +50,9 @@ namespace EduDataAPI.Models
         [JsonProperty("Payload")]
         public string Payload {get; set;}
 
+        [JsonIgnore]
+        public string Status {get; set;}
+
         
         
     }

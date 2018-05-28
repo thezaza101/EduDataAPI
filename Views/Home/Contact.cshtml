@@ -1,17 +1,47 @@
-﻿@{
-    ViewData["Title"] = "Contact";
+﻿@model EduDataAPI.Models.HomeViewModel
+@{
+    ViewData["Title"] = "Change Sets";
 }
-<h2>@ViewData["Title"]</h2>
-<h3>@ViewData["Message"]</h3>
+<h1>Change Set Stuff...</h1>
 
-<address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
-</address>
+<h3>@ViewData["ActionResult"]</h3>
 
-<address>
-    <strong>Support:</strong> <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>
+<h2>Manage Change Sets</h2>
+
+<div class="row">    
+    <h2>@ViewData["CSMessage"]</h2>
+    <form>
+        <div class="col-md-3">
+            <form asp-action="Contact">
+                <label asp-for="changeSetID"></label>
+                <input asp-for="changeSetID" placeholder=""/>
+                <input type="submit" value="Find" />
+            </form>
+        </div>
+        <form asp-action="Contact">
+            <div class="col-md-3">
+                <label asp-for="changeSetID"></label>
+                <br/>
+                <input asp-for="changeSetID" placeholder=""/>
+                <br/>
+                <label asp-for="changeUpdateDescription"></label>
+                <br/>
+                <input asp-for="changeUpdateDescription" value="@ViewData["changeUpdateDescription"]"/>
+                <br/>
+                <label asp-for="changeUpdatedDomain"></label>
+                <br/>
+                <input asp-for="changeUpdatedDomain" value="@ViewData["changeUpdatedDomain"]"/>
+                <br/>
+                
+            </div>
+
+            <div class="col-md-3">
+                <label asp-for="changeSetAction"></label>
+                <br/>
+                <input asp-for="changeSetAction" value="@ViewData["changeSetAction"]"/>
+                <br/>
+                <input type="submit" value="Submit" />
+            </div>
+        </form>
+    </form>
+</div>

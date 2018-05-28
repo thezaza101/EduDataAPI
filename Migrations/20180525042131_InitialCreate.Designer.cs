@@ -10,7 +10,7 @@ using System;
 namespace EduDataAPI.Migrations
 {
     [DbContext(typeof(EDUDataContext))]
-    [Migration("20180524031146_InitialCreate")]
+    [Migration("20180525042131_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -44,6 +44,8 @@ namespace EduDataAPI.Migrations
                     b.Property<string>("Payload");
 
                     b.Property<string>("PayloadType");
+
+                    b.Property<string>("Status");
 
                     b.Property<string>("UpdateDescription");
 

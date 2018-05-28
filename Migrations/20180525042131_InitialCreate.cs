@@ -15,6 +15,7 @@ namespace EduDataAPI.Migrations
                     ID = table.Column<string>(nullable: false),
                     Payload = table.Column<string>(nullable: true),
                     PayloadType = table.Column<string>(nullable: true),
+                    Status = table.Column<string>(nullable: true),
                     UpdateDescription = table.Column<string>(nullable: true),
                     UpdatedDomain = table.Column<string>(nullable: true),
                     iUpdatedIdentifiers = table.Column<string>(nullable: true)

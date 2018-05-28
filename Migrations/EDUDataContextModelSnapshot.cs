@@ -44,6 +44,8 @@ namespace EduDataAPI.Migrations
 
                     b.Property<string>("PayloadType");
 
+                    b.Property<string>("Status");
+
                     b.Property<string>("UpdateDescription");
 
                     b.Property<string>("UpdatedDomain");

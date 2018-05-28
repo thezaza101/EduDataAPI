@@ -26,14 +26,14 @@ namespace EduDataAPI.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-           /* 
+           
             StreamReader sr = new StreamReader("edu.json");
             string x = sr.ReadToEnd();
             sr.Close();
             Domain d = JsonConvert.DeserializeObject<Domain>(x);
             _context.Add(d);
             _context.SaveChanges();
-            */
+            
 
             return StatusCode(201, _context.Domain.Include("content").FirstOrDefault());
         }
@@ -59,6 +59,7 @@ namespace EduDataAPI.Controllers
         [HttpPost]
         public IActionResult Post([FromBody]dynamic value)
         {
+            /*
             string s = value.ToString();
             UpdatedData d = JsonConvert.DeserializeObject<UpdatedData>(s);
             d.DataID = Guid.NewGuid().ToString();
@@ -77,7 +78,10 @@ namespace EduDataAPI.Controllers
             }
             _context.Add(d);
             _context.SaveChanges();
+
             return StatusCode(201,d.DataID);
+             */
+             return StatusCode(400);
         }
 
         
